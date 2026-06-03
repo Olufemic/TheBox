@@ -120,7 +120,6 @@ body{
     justify-content: center;
 }
 .about-img{
-    /* flex: 0 1 70%; */
     width: 70%;
     
 }
@@ -631,4 +630,422 @@ button{
     font-size: 0.8rem;
     color: white;
     font-weight: 300;
+}
+
+
+/* =========================
+   TABLET (780px and below)
+========================= */
+@media screen and (max-width: 780px) {
+
+  /* NAV */
+  .nav{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* HERO */
+  .hero-content{
+    left: 50px;
+  }
+
+  .hero-content h1{
+    font-size: 3rem;
+    max-width: 450px;
+  }
+
+  .project-wrapper{
+    width: 320px;
+  }
+
+  /* REPUTATION */
+  .rep-cards{
+    width: 90%;
+    gap: 20px;
+  }
+
+  /* ABOUT */
+  .container{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-img{
+    width: 100%;
+  }
+
+  .about-content{
+    margin-left: 0;
+    flex: unset;
+    width: 90%;
+  }
+
+  .about-p{
+    width: 100%;
+  }
+
+  /* SERVICES */
+  .service-cards{
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card{
+    width: 90%;
+  }
+
+  /* EXPERIENCE */
+.experience-wrapper{
+    grid-template-columns: 1fr;
+    gap: 100px;
+}
+
+.counters{
+    height: 500px;
+    position: relative;
+}
+
+/* Keep overlapping effect */
+.clients{
+    width: 200px;
+    right: -300px;
+}
+
+.projects{
+    width: 260px;
+    right: -150px;
+    top: -40px;
+}
+
+.awards{
+    width: 200px;
+    right: -260px;
+    top: -50px;
+}
+
+.years{
+    width: 220px;
+    right: -180px;
+    top: -80px;
+}
+
+.counter h3{
+    font-size: 2.2rem;
+}
+
+.counter p{
+    font-size: 1rem;
+}
+
+.clients img,
+.projects img,
+.awards img,
+.years img{
+    transform: scale(.8);
+}
+
+.experience-content{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 0;
+}
+
+.experience-content button{
+    margin: 0 auto;
+}
+
+
+  /* BANNER */
+  .banner-wrapper{
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* PROJECTS */
+  .projects-section-wrapper{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-filter ul{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .projects-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .pagination button{
+    padding: 15px 40px;
+  }
+
+  /* CONTACT */
+  .contactus-section{
+    width: 90%;
+  }
+
+  .contactus-section p{
+    width: 100%;
+  }
+
+  /* NEWSLETTER */
+  .newsletter-wrapper{
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* =========================
+   MOBILE (490px and below)
+========================= */
+@media screen and (max-width: 490px) {
+
+  /* NAV */
+  .nav{
+    align-items: start;
+    
+  }
+  .nav ul{
+    display: none;
+  }
+
+  /* HERO */
+  .hero-section{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero{
+    height: 70vh;
+  }
+
+  .hero-content{
+    left: 20px;
+    top: 25%;
+  }
+
+  .hero-content h1{
+    font-size: 2.2rem;
+    max-width: 300px;
+  }
+
+  .project-wrapper{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* REPUTATION */
+ 
+  .rep-cards{
+    flex-direction: column;
+        width: 80%;
+        align-items: center;
+        margin: 30px auto 0;
+        gap: 20px;
+        
+  }
+
+  /* ABOUT */
+  .about-section{
+    
+    margin: 60px auto;
+  }
+  .about-content{
+    width: 95%;
+    padding: 20px;
+    margin:0 auto;
+        margin-top: -50px;
+        z-index: 2;
+  }
+
+  .about-content h2{
+    margin-bottom: 20px;
+  }
+  .about-img{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* SERVICES */
+  .service-cards{
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .service-card{
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+ /* EXPERIENCE */
+ .experience-section{
+    margin: 60px auto;
+ }
+.experience-wrapper{
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-top: 0;
+}
+.counter{
+    padding: 20px 15px;
+}
+
+.clients{
+    width: 250px;
+    right: -120px;
+}
+.clients img{
+    top: -30px;
+    left: 230px;
+}
+
+.projects{
+    width: 300px;
+    right: -30px;
+    top: -40px;
+}
+.projects img{
+    top: -30px;
+    left: -20px;
+}
+
+.awards{
+    width: 250px;
+    right: -100px;
+    top: -50px;
+}
+
+.years{
+    width: 240px;
+    right: -40px;
+    top: -80px;
+}
+.years img{
+    bottom: -30px;
+    right: -20px;
+}   
+
+.experience-content{
+    width: 95%;
+    margin-top: -80px;
+    text-align: center;
+}
+
+.experience-content h2{
+    font-size: 2rem;
+}
+
+.experience-content button{
+    width: 200px;
+    margin: 0 auto;
+}
+  /* BANNER */
+ .banner-section{
+    width: 100%;
+    
+    box-sizing: border-box;
+}
+.banner-wrapper{
+    padding: 90px 20px;
+}
+  .banner h2{
+    font-size: 1.5rem;
+  }
+
+  .banner p{
+    font-size: 1rem;
+  }
+
+  /* PROJECTS */
+  .projects-section-wrapper{
+    width: 100%;
+    margin: 10px auto;
+  }
+  .projects-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .project-filter ul{
+    justify-content: center;
+  }
+  
+.card-info h3 {
+  font-size: 0.9rem;
+}
+.card-info p{
+    font-size: 0.8rem;
+}
+
+  .pagination{
+    gap: 15px;
+  }
+
+  .pagination button{
+    width: 50%;
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+  .dots span {
+  width: 10px;
+  height: 10px;
+ 
+}
+
+  /* CONTACT */
+  
+  .form{
+    grid-template-columns: 1fr;
+  }
+
+  textarea,
+  button{
+    grid-column: auto;
+  }
+
+  button{
+    width: 100%;
+  }
+
+  /* NEWSLETTER */
+  .newsletter-wrapper{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .newsletter-section{
+    padding: 40px 0;
+
+  }
+    
+  .details p, .input p,.newsletter p{
+    font-size: 0.8rem;
+  }
+
+
+  .input button{
+    width: 50%;
+  } 
+
+  .icon{
+    display: flex;
+    gap: 15px;
+  }
+
+  /* FOOTER */
+  .footer{
+
+    padding: 20px;
+    text-align: center;
+  }
+  
 }
