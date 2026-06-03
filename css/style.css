@@ -902,14 +902,14 @@ button{
     padding: 20px 15px;
 }
 
-.clients{
+ .clients{
     width: 230px;
     top: -30px;
-    right: -100px;
+    right: -85px;
 }
 .clients img{
     top: -30px;
-    left: 210px;
+    left: 200px;
 }
 
 .projects{
@@ -924,12 +924,12 @@ button{
 
 .awards{
     width: 230px;
-    right: -100px;
+    right: -85px;
     top: -50px;
 }
 .awards img{
     top: -30px;
-    left: 210px;
+    left: 200px;
 }
 
 .years{
@@ -940,7 +940,7 @@ button{
 .years img{
     bottom: -30px;
     right: -20px;
-}   
+}    
 
 .experience-content{
     width: 95%;
