@@ -895,7 +895,8 @@ button{
 .experience-wrapper{
     grid-template-columns: 1fr;
     gap: 50px;
-    margin-top: 0;
+    width: 90%;
+    margin-top: 0 auto;
 }
 .counter{
     padding: 20px 15px;
