@@ -903,17 +903,17 @@ button{
 }
 
 .clients{
-    width: 250px;
+    width: 230px;
     top: -30px;
-    right: -90px;
+    right: -100px;
 }
 .clients img{
     top: -30px;
-    left: 230px;
+    left: 210px;
 }
 
 .projects{
-    width: 300px;
+    width: 250px;
     right: -10px;
     top: -40px;
 }
@@ -923,17 +923,17 @@ button{
 }
 
 .awards{
-    width: 250px;
-    right: -80px;
+    width: 230px;
+    right: -100px;
     top: -50px;
 }
 .awards img{
     top: -30px;
-    left: 230px;
+    left: 210px;
 }
 
 .years{
-    width: 240px;
+    width: 220px;
     right: -40px;
     top: -60px;
 }
