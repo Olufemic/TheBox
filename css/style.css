@@ -896,7 +896,7 @@ button{
     grid-template-columns: 1fr;
     gap: 50px;
     width: 90%;
-    margin-top: 0 auto;
+    margin: 0 auto;
 }
 .counter{
     padding: 20px 15px;
@@ -904,7 +904,8 @@ button{
 
 .clients{
     width: 250px;
-    right: -120px;
+    top: -30px;
+    right: -90px;
 }
 .clients img{
     top: -30px;
@@ -913,7 +914,7 @@ button{
 
 .projects{
     width: 300px;
-    right: -30px;
+    right: -10px;
     top: -40px;
 }
 .projects img{
@@ -923,14 +924,18 @@ button{
 
 .awards{
     width: 250px;
-    right: -100px;
+    right: -80px;
     top: -50px;
+}
+.awards img{
+    top: -30px;
+    left: 230px;
 }
 
 .years{
     width: 240px;
     right: -40px;
-    top: -80px;
+    top: -60px;
 }
 .years img{
     bottom: -30px;
