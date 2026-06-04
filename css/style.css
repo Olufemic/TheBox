@@ -54,8 +54,22 @@ button{
 .nav li{
     list-style: none;
 }
-.nav span{
+
+.nav a{
+    text-decoration: none;
+    color: #292E3D;
+}
+.nav span {
     color: orange;
+}
+.nav a:hover{
+    color: #2947A9;
+}
+.nav a span:hover {
+    color: #a86236;
+}
+.nav a:active{
+    color: #2947A9;
 }
 
 /* HERO=================
