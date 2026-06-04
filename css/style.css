@@ -2,8 +2,38 @@
     margin: 0;
     padding: 0;
 }
+/* fade */
+.hidden{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .7s ease;
+}
+
+.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body{
     font-family: "Work Sans", sans-serif;
+}
+button{
+  position: relative;
+  overflow: hidden;
+}
+.ripple{
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background: rgba(255,255,255,.5);
+  animation: ripple .6s linear;
+}
+
+@keyframes ripple{
+  to{
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 /* NAV=================
 =============== */
@@ -79,7 +109,21 @@ body{
     right: 0;
     width: 400px;
 }
+.hero-content{
+  animation: slideIn 1s ease;
+}
 
+@keyframes slideIn{
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* REPUTATION SECTION ==============
 ================*/
 .reputation-section{
@@ -649,7 +693,23 @@ button{
     font-weight: 300;
 }
 
+/* ANIMATION */
+html{
+  scroll-behavior: smooth;
+}
+.rep-card,
+.service-card,
+.proj-card,
+.counter{
+  transition: .3s ease;
+}
 
+.rep-card:hover,
+.service-card:hover,
+.proj-card:hover,
+.counter:hover{
+  transform: translateY(-10px);
+}
 /* =========================
    TABLET (780px and below)
 ========================= */

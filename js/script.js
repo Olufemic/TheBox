@@ -48,3 +48,111 @@ dots.forEach((dot,index)=>{
         updateCarousel();
     });
 });
+
+
+// Counter Animation
+const counters = document.querySelectorAll(".count");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+
+      const counter = entry.target;
+      const target = +counter.dataset.target;
+
+      let current = 0;
+
+      const update = () => {
+        const increment = target / 50;
+
+        if(current < target){
+          current += increment;
+          counter.textContent = Math.ceil(current);
+          requestAnimationFrame(update);
+        }else{
+          counter.textContent = target;
+        }
+      };
+
+      update();
+      observer.unobserve(counter);
+    }
+  });
+});
+
+counters.forEach(counter => observer.observe(counter));
+
+// fade
+const hiddenElements = document.querySelectorAll(
+  ".rep-card, .service-card, .proj-card"
+);
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+hiddenElements.forEach(el => {
+  el.classList.add("hidden");
+  revealObserver.observe(el);
+});
+
+// active nav links
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+    const top = section.offsetTop - 150;
+
+    if(window.scrollY >= top){
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if(link.getAttribute("href") === `#${current}`){
+      link.classList.add("active");
+    }
+  });
+});
+
+//Button ripple effect 
+document.querySelectorAll("button").forEach(button => {
+
+  button.addEventListener("click", function(e){
+
+    const circle = document.createElement("span");
+
+    const size = Math.max(
+      this.clientWidth,
+      this.clientHeight
+    );
+
+    circle.style.width = size + "px";
+    circle.style.height = size + "px";
+
+    circle.style.left =
+      e.offsetX - size / 2 + "px";
+
+    circle.style.top =
+      e.offsetY - size / 2 + "px";
+
+    circle.classList.add("ripple");
+
+    this.appendChild(circle);
+
+    setTimeout(() => {
+      circle.remove();
+    }, 600);
+  });
+
+});
