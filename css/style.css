@@ -37,6 +37,9 @@ button{
 }
 /* NAV=================
 =============== */
+section{
+    scroll-margin-top: 100px;
+}
 .nav-section{
     
     padding: 20px 0;
