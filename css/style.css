@@ -995,7 +995,7 @@ button{
     width: 100%;
     margin: 10px auto;
   }
-  .projects-grid{
+  .slide{
     grid-template-columns: 1fr;
   }
 
