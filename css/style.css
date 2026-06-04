@@ -38,14 +38,27 @@ button{
 /* NAV=================
 =============== */
 .nav-section{
-    width: 90%;
-    margin: 0 auto;
+    
     padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .nav{
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.hamburger{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 .nav ul{
     display: flex;
@@ -402,6 +415,10 @@ text-align: center;
     font-weight: 600;
     letter-spacing: 0.5px;  
     cursor: pointer;
+}
+.experience-content a{
+    color: white;
+    text-decoration: none;
 }
 /* BANNER SECTION */
 .banner-section{
@@ -904,12 +921,46 @@ html{
 
   /* NAV */
   .nav{
-    align-items: start;
-    
-  }
-  .nav ul{
-    display: none;
-  }
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        position: absolute;
+        top: 65px;
+        right: -20px;
+
+        width: 100%;
+        margin: 0 auto;
+        background: white;
+
+        padding: 20px 20px;
+
+        box-shadow: 0 5px 15px rgba(0,0,0,.1);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+
+        transition: .3s ease;
+    }
+
+    .nav-links.active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 
   /* HERO */
   .hero-section{

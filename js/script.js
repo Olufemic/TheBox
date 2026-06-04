@@ -1,3 +1,24 @@
+// navbar toggle
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    if(navLinks.classList.contains("active")){
+        hamburger.textContent = "✕";
+    }else{
+        hamburger.textContent = "☰";
+    }
+
+});
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    hamburger.textContent = "☰";
+  });
+});
 
 const track = document.querySelector(".carousel-track");
 const slides = document.querySelectorAll(".slide");
@@ -102,7 +123,7 @@ hiddenElements.forEach(el => {
 
 // active nav links
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav a");
+const navItems = document.querySelectorAll(".nav a");
 
 window.addEventListener("scroll", () => {
 
@@ -116,7 +137,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  navLinks.forEach(link => {
+  navItems.forEach(link => {
     link.classList.remove("active");
 
     if(link.getAttribute("href") === `#${current}`){
@@ -156,3 +177,4 @@ document.querySelectorAll("button").forEach(button => {
   });
 
 });
+
